@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "outDir": "public/extension",
+      "target": "es6",
+      "lib": ["dom", "esnext"],
+      "module": "esnext",
+      "moduleResolution": "node",
+      "jsx": "react-jsx",
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "types": ["chrome"]
+    },
+    "include": ["src/extension/**/*"]
+  }
+  

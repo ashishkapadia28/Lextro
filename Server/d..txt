@@ -1,0 +1,57 @@
+[User opens site]
+        |
+        v
+[Signed In?] -- No --> [Sign In / Sign Up via Clerk] 
+        |
+       Yes
+        |
+        v
+[Sidebar] --> [User inputs problem details] --> [Click Get Explanation]
+        |
+        v
+[POST /api/query]
+        |
+        v
+[Backend: auth() + syncUser + getGeminiExplanation + save in DB]
+        |
+        v
+[Return AI explanation]
+        |
+        v
+[Sidebar shows explanation to user]
+
+
+
+[User add extennssion to chrome]
+        |
+        v
+[Signed In?] -- No --> [Sign In / Sign Up via Clerk] 
+        |
+       Yes
+        |
+        v
+[Sidebar] --> [User inputs problem details] --> [Click Get Explanation]
+        |
+        v
+[POST /api/query]
+        |
+        v
+[Backend: auth() + syncUser + getGeminiExplanation + save in DB]
+        |
+        v
+[Return AI explanation]
+        |
+        v
+[Sidebar shows explanation to user]
+
+
+
+
+
+         [Chrome Extension]                  [Landing Website]
+                  |                                 |
+                  |                                 |
+                  +---------->  [Next.js Backend + Prisma + Clerk + Gemini]
+                                            |
+                                            v
+                                 [Postgres Database (Neon)]
